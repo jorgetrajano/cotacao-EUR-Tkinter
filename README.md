@@ -21,7 +21,7 @@ Este projeto foi desenvolvido para buscar preço e cotação da paridade EUR/BRL
   
 ### Maiores dificuldades:
 
-    Ao realizar a exportação, houveram benefícios nas etapas de ajustar as configurações já com os itens em suas posições. Por outro lado, a caixa de texto não foi exportada, sendo necessária a construção manual. Esta foi a parte mais desafiadora para colocar este item em harmonia com o código todo.
+  Ao realizar a exportação, houveram benefícios nas etapas de ajustar as configurações já com os itens em suas posições. Por outro lado, a caixa de texto não foi exportada, sendo necessária a construção manual. Esta foi a parte mais desafiadora para colocar este item em harmonia com o código todo.
     
 ### Atualizações:
 
