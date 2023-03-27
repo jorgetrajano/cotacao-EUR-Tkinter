@@ -10,28 +10,31 @@ def btn_clicked():
     valorReais = float(valorReais)
     euroHoje = dicionario_moeda['EURBRL']["bid"]
     euroHoje = float(euroHoje)
-    euro = valorReais / euroHoje
+    cambio = (valorReais - (valorReais * 0.036))
+    eurotax = euroHoje + (euroHoje * 0.036)
+    euro = cambio / eurotax
     mensagem = tkinter.Label(window, text='')
     if euro:
-        mensagem['text'] = 'A cotação é de € {:.2f}'.format(euro)
+        mensagem['text'] = 'A cotação é de € {:,.2f}'.format(euro)
         mensagem.config(justify="center", fg='white', bg='#060606')
         mensagem.place(
-            x=504,
+            x=500,
             y=308
         )
-        mensagem3 = tkinter.Label(window, text=f'€ {1.00:.2f} = R$ {euroHoje:.2f}')
+        mensagem3 = tkinter.Label(window, text=f'€ {1.00:.2f} = R$ {euroHoje:.2f} \n+ 1,1% IOF \n+ 2,5% Spread \nValor Total: € {1.00:.2f} = R$ {eurotax:.2f}')
         mensagem3.config(justify="center", fg='white', bg='#060606')
         mensagem3.place(
-            x=504,
-            y=378
+            x=500,
+            y=338
         )
     else:
         mensagem2 = tkinter.Label(window, text='Insira um valor válido!')
         mensagem2.config(justify="center", fg='white', bg='#060606')
         mensagem2.place(
             x=504,
-            y=308,
+            y=338,
         )
+
 
 window = Tk()
 
